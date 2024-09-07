@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namans Propose</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        #target{
+            left:400px;
+            top: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="guitar.gif" alt="">
+        <h2>Manja na! Kitta bhav Khaegi 😭</h2>
+        <p>bhaut galst baat h 😒</p>
+        <div class="bset">
+            <button class="no" id="target">No</button>
+            <a href="finalp.html"><button class="yes">Yes</button></a>
+        </div>
+    </div>
+    <script>
+        const tar = document.getElementById('target');
+        function moveTarget(){
+            const maxw=400;
+            const maxh=400;
+            const ranx=Math.floor(Math.random()*maxw);
+            const rany=Math.floor(Math.random()*maxh);
+            tar.style.left = ranx+'px';
+            tar.style.top = rany+'px';
+        }
+        tar.addEventListener('mouseenter',()=>{
+            moveTarget();
+        })
+    </script>
+</body>
+</html>
